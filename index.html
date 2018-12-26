@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+     function computerPlay(){
+         var playText=['ROCK', 'PAPER','SCISSORS'];
+         var ranIndex= playText[Math.floor(Math.random()*playText.length)];
+         return ranIndex;         
+     }
+     function results(comp,user){
+         user=user.toUpperCase();
+       if((comp=="ROCK")&&(user=="PAPER"))
+       {
+           alert("You win!, Paper beats Rock");
+       } 
+       if((comp=="PAPER")&&(user=="ROCK"))
+       {
+           alert("You Lose!, Paper beats Rock");
+       } 
+       if((comp=="PAPER")&&(user=="SCISSORS"))
+       {
+           alert("You Win!, Scissors beats Paper");
+       } 
+       if((comp=="SCISSORS")&&(user=="PAPER"))
+       {
+           alert("You Lose!, Scissors beats Paper");
+       } 
+       if((comp=="SCISSORS")&&(user=="ROCK"))
+       {
+           alert("You Win!, Rock beats Scissors");
+       } 
+       if((comp=="ROCK")&&(user=="SCISSORS"))
+       {
+           alert("You Lose!, Rock beats Scissors");
+       } 
+
+     }
+     function game(){
+     
+     for(var i=0;i<5;i++){
+         let userOPT= window.prompt("Write down either of Rock, Paper, Scissors");
+         let computerOPT=computerPlay();
+         alert("You select:"+userOPT+"\nComputer Select:"+computerOPT);
+         results(computerOPT,userOPT);
+
+     }
+
+     }
+     game();
+    
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
